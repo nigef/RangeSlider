@@ -3,23 +3,31 @@ RangeSlider
 
 RangeSlider is a simple slider built ontop of [jQuery UI Draggable](http://jqueryui.com/draggable/#constrain-movement)
 
-This is was quickly built to fill the need for a decent range/slider for setting the level of difficulty of test questions. It has not been optimized or refactored.
+This was built over a weekend to fill a need for a decent range/slider for setting the level of difficulty of test questions. The dual-handle slider allows for filtering out minima and maxima values.
 
 ## Built With
 [jQuery 2+](https://code.jquery.com/jquery-2.1.1.min.js)
 
 [jQuery UI (.js only, not .css)](//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css)
 
+## Minimal Browser Tests
+* Chrome 38.0.2125.111
+* Firefox 32.0.3
+* Safari 8.0
+
 ## Features
-* localStorage
+* localStorage of state and view
 * Sliders move by either: drag, or clicking adjacent spaces
-* Supports different amount of '.num' elements
+* Supports different amount of `.num` elements
+* Currently `.num` can only contain unsigned integers
+* Responsive
+* Works on touchscreen (tested recent iOS, Android)
 
 ## HTML
 * The container needs a unique id.
-* Must have 1 or 2 '.slider_handle' elements.
-* '.handle_left' must be first, and '.handle_right' must be last.
-* Supports multiple sliders on same page.
+* Must have 1 or 2 `.slider_handle` elements.
+* `.handle_left` must be first, and `.handle_right` must be last.
+* Supports multiple `.slider` things on same page.
 
 ```html
 <div class="slider" id="uniqueID">
@@ -40,7 +48,7 @@ This is was quickly built to fill the need for a decent range/slider for setting
 ```
 
 ## JS
-* Attach the handles with .draggable()
+* jQuery UI attaches the slider handles with .draggable()
 ```javascript
 $( ".slider_handle" ).draggable({
 	containment: ".slider",
@@ -55,12 +63,17 @@ $( ".slider_handle" ).draggable({
 	}
 });
 ```
-The css updated is triggered by these ways
-1. on load `$(document).ready` => gets localStorage and sets css
-2. on viewport change `$(window).resize` => adjusts css from localStorage if exists
-3. dragging the `slider_handle` handle => snaps handle, and adjusts range css, sets localStorage
-4. stopping dragging the `slider_handle` handle => snaps handle to nearest place, sets localStorage
-5. clicking somewhere on the range => moves handles, sets localStorage
+* The localStorage key is set in the form: `"_slide-" + parentID + "-handle_left"`
+* The localStorage value is the integer from `.num` text
+
+## Events
+The css is updated and localStorage are set by these ways:  
+
+1.  on load `$(document).ready` => gets localStorage and sets css
+2.  on viewport change `$(window).resize` => adjusts css from localStorage if exists
+3.  dragging the `slider_handle` handle => snaps handle, and adjusts range css, sets localStorage
+4.  stopping dragging the `slider_handle` handle => snaps handle to nearest place, sets localStorage
+5.  clicking somewhere on the range => moves handles, sets localStorage
 
 ## Issues
 * Safari and FF interpretation of `inline-flex` requires `margin-right: -4px;` on `.num` elements
