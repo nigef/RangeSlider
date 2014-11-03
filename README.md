@@ -25,7 +25,7 @@ This was built over a weekend to fill a need for a decent range/slider for setti
 
 ## HTML
 * The container needs a unique id.
-* Must have 1 or 2 `.slider_handle` elements.
+* Must have either 1 or 2 `.slider_handle` elements in `.slider` container.
 * `.handle_left` must be first, and `.handle_right` must be last.
 * Supports multiple `.slider` things on same page.
 
