@@ -3,7 +3,7 @@ RangeSlider
 
 RangeSlider is a simple slider built ontop of [jQuery UI Draggable](http://jqueryui.com/draggable/#constrain-movement)
 
-This was built quickly over a weekend when I couldn't find just the right range/slider I was looking for. FWIW I made this for setting the level of difficulty of test questions. The dual-handle slider allows for filtering out minima and maxima values.
+This was built quickly over a weekend when I couldn't find just the right range/slider I was looking for. FWIW I made this for setting the level of difficulty of test questions. The dual-handle slider allows for optional filtering out of minima and maxima values.
 
 ## Built With
 [jQuery 2+](https://code.jquery.com/jquery-2.1.1.min.js)
