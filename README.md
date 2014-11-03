@@ -8,10 +8,10 @@ This was built over a weekend to fill a need for a decent range/slider for setti
 ## Built With
 [jQuery 2+](https://code.jquery.com/jquery-2.1.1.min.js)
 
-[jQuery UI (.js only, not .css)](//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css)
+[jQuery UI (.js only)](//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css)
 
 ## Minimal Browser Tests
-* Chrome 38.0.2125.111
+* Chrome 38.0.2125.111 *Recommended
 * Firefox 32.0.3
 * Safari 8.0
 
@@ -75,6 +75,3 @@ The css is updated and localStorage are set by these ways:
 4.  stopping dragging the `slider_handle` handle => snaps handle to nearest place, sets localStorage
 5.  clicking somewhere on the range => moves handles, sets localStorage
 
-## Issues
-* Safari and FF interpretation of `inline-flex` requires `margin-right: -4px;` on `.num` elements
-* Unfortunately, current workaround uses browser sniffing
