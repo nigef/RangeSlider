@@ -8,7 +8,7 @@ This was built over a weekend to fill a need for a decent range/slider for setti
 ## Built With
 [jQuery 2+](https://code.jquery.com/jquery-2.1.1.min.js)
 
-[jQuery UI (.js only)](//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css)
+[jQuery UI (.js only)](https://code.jquery.com/ui/1.11.2/jquery-ui.min.js)
 
 ## Minimal Browser Tests
 * Chrome 38.0.2125.111 *Recommended
