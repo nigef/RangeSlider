@@ -21,6 +21,7 @@ This was built over a weekend to fill a need for a decent range/slider for setti
 * Sliders move by either: drag, or clicking adjacent spaces
 * Supports different amount of `.num` elements
 * Currently `.num` can only contain unsigned integers
+* Easy to hook into the integer on `.slider_handle` change
 * Responsive
 * Works on touchscreen (tested recent iOS, Android)
 
