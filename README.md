@@ -1,6 +1,6 @@
 RangeSlider
 ===========
-## [DEMO, or it didn't happen](http://nigelnsf.github.io/RangeSlider/)
+## [DEMO, or it didn't happen](http://@nigef.github.io/RangeSlider/)
 
 RangeSlider is a simple slider built ontop of [jQuery UI Draggable](http://jqueryui.com/draggable/#constrain-movement)
 
